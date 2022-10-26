@@ -286,7 +286,115 @@ function reverseString(str) {
 
 console.log(palarray);
 console.log(palindrome);
-// need to convert this to functions
+
+//Anonymous function
+
+var palin = function (palarray){
+   
+    let palindrome = [];
+    
+    for(let i=0; i<palarray.length; i++)
+    {
+        let arrayChar = palarray[i].split('').join('');
+        let string1 = arrayChar;
+        let revstring = reverseString(string1);
+    
+    if(string1 == revstring)
+    {
+        palindrome.push(string1);
+        
+    }
+     
+    }    //for loop ends here
+    
+    return palindrome;
+
+    function reverseString(str) {
+        // Step 1. Use the split() method to return a new array
+        var splitString = str.split(""); // var splitString = "hello".split("");
+        // ["h", "e", "l", "l", "o"]
+     
+        // Step 2. Use the reverse() method to reverse the new created array
+        var reverseArray = splitString.reverse(); // var reverseArray = ["h", "e", "l", "l", "o"].reverse();
+        // ["o", "l", "l", "e", "h"]
+     
+        // Step 3. Use the join() method to join all elements of the array into a string
+        var joinArray = reverseArray.join(""); // var joinArray = ["o", "l", "l", "e", "h"].join("");
+        // "olleh"
+        
+        //Step 4. Return the reversed string
+        return joinArray; // "olleh"
+    }
+    
+}; console.log("Anonymous Function:", palin(["appa","daughter","amma","otto"]));
+
+
+//Arrow Function 
+
+var palin = (palarray) => {
+   
+    let palindrome = [];
+    
+    for(let i=0; i<palarray.length; i++)
+    {
+        let arrayChar = palarray[i].split('').join('');
+        let string1 = arrayChar;
+        let revstring = reverseString(string1);
+    
+    if(string1 == revstring)
+    {
+        palindrome.push(string1);
+        
+    }
+     
+    }    //for loop ends here
+    
+    return palindrome;
+
+    function reverseString(str) {
+        // Step 1. Use the split() method to return a new array
+        var splitString = str.split(""); // var splitString = "hello".split("");
+        // ["h", "e", "l", "l", "o"]
+     
+        // Step 2. Use the reverse() method to reverse the new created array
+        var reverseArray = splitString.reverse(); // var reverseArray = ["h", "e", "l", "l", "o"].reverse();
+        // ["o", "l", "l", "e", "h"]
+     
+        // Step 3. Use the join() method to join all elements of the array into a string
+        var joinArray = reverseArray.join(""); // var joinArray = ["o", "l", "l", "e", "h"].join("");
+        // "olleh"
+        
+        //Step 4. Return the reversed string
+        return joinArray; // "olleh"
+    }
+    
+}; console.log("Arrow Function:", palin(["appa","daughter","otto"]));
+
+
+//IIFE Function
+
+(function (palarray){
+   
+    let palindrome = [];
+    
+    for(let i=0; i<palarray.length; i++)
+    {
+        let arrayChar = palarray[i].split('').join('');
+        let string1 = arrayChar;
+        let revstring = reverseString(string1);    //reusing the revserString function already created
+    
+    if(string1 == revstring)
+    {
+        palindrome.push(string1);
+        
+    }
+     
+    }    //for loop ends here
+    
+    return palindrome;
+    
+}); console.log("IFFE Function:", (["appa","daughter","otto","madam"]));
+
 
 
 console.log("/---------------------------------------------------/");
