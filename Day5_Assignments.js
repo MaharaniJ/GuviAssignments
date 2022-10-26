@@ -1,4 +1,5 @@
-console.log("Day 6 - Assignment ::::::::")
+console.log("Day 5 - Assignment ::::::::")
+//Javascript Funtions
 
 //1. Print Odd numbers in an array
 
