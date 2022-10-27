@@ -31,12 +31,15 @@ class Movie {
    let movie3 = new Movie ("A", "red studios");
    let movie4 = new Movie ("B", "pink studios");
    
+   let movie5 = new Movie ("CasinoRoyale","Eon Productions","PG1");
 
    console.log(movie1);
    console.log(movie2);
    console.log(movie3);
    console.log(movie4);
+   console.log(movie5);
 
+  
 //    same output on different format   
 //    const array = [movie1, movie2, movie3, movie4];
 //    console.log(array);
