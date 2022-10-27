@@ -392,6 +392,239 @@ var palin = (palarray) => {
     }    //for loop ends here
     
     return palindrome;
+      
+      
+   console.log("/---------------------------------------------------/");
+console.log("/6. Return median of two sorted arrays of same size /");
+console.log("/---------------------------------------------------/");
+
+
+var sortFunction = function(arr1,arr2){
+     console.log("Anonymous Function.............")
+     var arrconcat = arr1.concat(arr2);
+     console.log(arrconcat);
+     var arrsort = arrconcat.sort((a,b) => a-b);
+     console.log(arrsort);
+     var arrlength = arrsort.length;
+     console.log(arrlength);
+     var m1 = arrlength/2;
+     var m2 = arrlength/2-1;
+     if(arrlength%2!=0)
+     {
+        var result = arrsort[Math.floor(m1)];
+        console.log("1.median:",result);
+     }
+     else
+     {
+        var result  = (arrsort[m1]+arrsort[m2])/2; 
+        console.log("2.Mddian:",result);
+     }
+
+return result;
+}
+arr1=[1,3,6];
+arr2=[7,4,2];
+sortFunction(arr1,arr2);
+
+//Anonymous function
+
+//IIFE function
+
+(function (arr1,arr2){
+
+console.log("IIFE function");
+var concatarr = arr1.concat(arr2);
+console.log(concatarr);
+var sortarr = concatarr.sort((a,b) => a-b);
+console.log(sortarr);
+var arrlength = sortarr.length;
+console.log(arrlength);
+if(arrlength%2!=0)
+{
+    var result = sortarr[Math.floor(arrlength/2)];
+    console.log("median:",result);
+    
+}
+else
+{
+    var result = (sortarr[arrlength/2]+sortarr[arrlength/2-1])/2;
+    console.log("median:",result);
+    
+
+}
+  
+})([1,3,6],[7,4,2]);
+
+//Arrow Function
+
+console.log("/---------------------------------------------------/");
+console.log("/7. Remove duplicates from an array                 /");
+console.log("/---------------------------------------------------/");
+
+//Anonymous function
+
+//IIFE function
+
+//Arrow Function
+var fnname = (arr1,arr2) =>{
+    console.log("Arrow function ");
+    var mediarr1 = arr1.concat(arr2);
+    console.log(mediarr1);
+    var sortarr = mediarr1.sort((a,b) => a-b);
+    console.log(sortarr);
+    var medianarr = sortarr.length;
+    console.log(medianarr);
+    if(medianarr%2!=0)
+    {
+        var result = sortarr[Math.floor(medianarr/2)];
+        return result;
+    } 
+    else{
+        var result = (sortarr[medianarr/2]+sortarr[medianarr/2-1])/2;
+        // console.log("2.Med",result);
+        return result;
+    }
+};
+
+console.log(fnname([1,5,4],[3,6,8]));
+
+
+console.log("/---------------------------------------------------/");
+console.log("/8. Rotate an array by k times                      /");
+console.log("/---------------------------------------------------/");
+
+//Anonymous function
+var Name2 = function(arr1,arr2){
+    console.log("Anonymouse function");
+    var concatarray = arr1.concat(arr2);
+    console.log(concatarray);
+    var sortarray = concatarray.sort((a,b) =>a-b);
+    console.log(sortarray);
+    var arraylength = sortarray.length;
+    console.log(arraylength);
+    if(arraylength%2!=0)
+    {
+        var result = sortarray[Math.floor(arraylength/2)];
+        return result;
+     } 
+     else{
+        var result = (sortarray[arraylength/2]+sortarray[arraylength/2-1])/2;
+        return result;
+     }
+    }
+console.log(Name2([3,4,6],[8,9,1]));
+
+// normal function
+function removeDuplicat(arr)
+{    var unique = [];
+    arr.forEach(element => {
+        if (!unique.includes(element))
+        {
+            unique.push(element);
+        }
+    });
+    return unique;
+
+}console.log(removeDuplicat(["apple","orange","apple"]));
+
+//anonymouse function
+var removDup = function(arr){  
+    var unique = [];
+    arr.forEach(element => {
+        if (!unique.includes(element))
+        {
+            unique.push(element);
+        }
+    });
+    return unique;
+};
+   console.log(removDup(["apple","orange","apple"]));
+
+
+//IFFE Function
+(function (arr1){
+    
+    var unique = [];
+    arr1.forEach(element => {
+        if (!unique.includes(element))
+        {
+            unique.push(element);
+        }
+    });
+    console.log(unique);
+
+
+})(["apple","orange","apple"]);   
+
+//Arrow Function
+
+var removedup = (arr2) =>{
+    var unique = [];
+    arr2.forEach(element => {
+        if (!unique.includes(element))
+        {
+            unique.push(element);
+        }
+    });
+    return unique;
+};console.log(removedup(["apple","orange","apple"]));
+
+//rotate an array k times
+//normal function
+var unique = [];
+arr1.forEach(element => {
+    if (!unique.includes(element))
+    {
+        unique.push(element);
+    }
+});
+console.log(unique);
+
+
+//rotate an array normal function
+const rotateArray1 = function(nums, k) {
+    console.log("Rotate an array");
+
+    for (let i = 0; i < k; i++) {
+        nums.unshift(nums.pop());
+    }
+  
+    return nums;
+  }
+  console.log(rotateArray1([1,2,3,4],2));
+
+  //anonymous function
+  var rotateArray = function(num,k){
+    console.log("anonymous function");
+    for (let i = 0; i < k; i++) {
+        num.unshift(num.pop());
+    }
+  
+    return num;
+  }
+  console.log(rotateArray([1,2,3,4],2));
+
+//arrow functio
+    var rotateAnarray = (num1,k) => {
+        console.log("arrow function")
+        for(let i=0; i<k; i++)
+        num1.unshift(num1.pop());
+return num1;
+
+    }
+    console.log(rotateAnarray([1,2,3,4],2));
+
+    //IIFE function
+    (function(num2,k){
+        console.log("IIFE funtion");
+        for(let i=0; i<k; i++)
+        num2.unshift(num2.pop());
+        console.log(num2);
+    })
+    ([1,2,3,4],2)
+  
+      
+      
     
 }); console.log("IFFE Function:", (["appa","daughter","otto","madam"]));
 
